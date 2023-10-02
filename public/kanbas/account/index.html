@@ -4,23 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Aidan's Kanbas</title>
-    <link href="../vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
-    <link href="navigation_bar.css" rel="stylesheet" </head>
+    <link href="../navigation_bar.css" rel="stylesheet">
+    <link href="account.css" rel="stylesheet">
+    <link href="./profile/profile.css" rel ="stylesheet">
+</head>
 
 <body>
     <div class="d-flex flex-row">
-        <div class="list-group wd-navbar">
+        <div id="navigation_bar" class="list-group wd-navbar ">
             <div class="list-group-item wd-navbar-nu">N</div>
-            <a href="account/" class="list-group-item list-group-item-action wd-navbar-item">
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item-active">
                 <i class="fa-solid fa-user fa-2x wd-navbar-icon-account"></i>
                 <div class="wd-navbar-text">Account</div>
             </a>
-            <a href="dashboard/" class="list-group-item list-group-item-action wd-navbar-item">
+            <a href="../dashboard/" class="list-group-item list-group-item-action wd-navbar-item">
                 <i class="fa-solid fa-gauge fa-2x wd-navbar-icon"></i>
                 <div class="wd-navbar-text">Dashboard</div>
             </a>
-            <a href="courses/" class="list-group-item list-group-item-action wd-navbar-item">
+            <a href="../courses/" class="list-group-item list-group-item-action wd-navbar-item">
                 <i class="fa-solid fa-book fa-2x wd-navbar-icon"></i>
                 <div class="wd-navbar-text">Courses</div>
             </a>
@@ -52,5 +55,23 @@
             </a>
             <div class="wd-navbar-item wd-navbar-take-height"></div>
         </div>
+        
+
+        <div class="flex-fill">
+            <h3 class="wd-top-profile">Aidan Ih's Profile</h3>
+            <div class="d-flex flex-row">
+                <ul class="list-group wd-profile-sidebar">
+                    <a href="#" class="list-group-item list-group-item">Notifications</a>
+                    <a href="profile/" class="list-group-item list-group-item selected">Profile</a>
+                    <a href="#" class="list-group-item list-group-item">Settings</a>
+                    <a href="#" class="list-group-item list-group-item">ePortfolios</a>
+                    <a href="#" class="list-group-item list-group-item">Shared Content</a>
+                    <a href="#" class="list-group-item list-group-item">The Hub</a>
+                    <a href="#" class="list-group-item list-group-item">Qwickly Course Tools</a>
+                    <a href="#" class="list-group-item list-group-item">Global Announcements</a>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8"></div>
     </div>
 </body>

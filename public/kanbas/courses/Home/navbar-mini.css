@@ -1,0 +1,15 @@
+.wd-navbar {
+    width: 100%;
+}
+
+.wd-navbar-icon {
+    color: red;
+}
+
+.wd-navbar-text{
+    color: red;
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+

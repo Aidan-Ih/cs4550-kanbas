@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link href="../../../vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="../../navigation_bar.css" rel="stylesheet">
+    <link href="../account.css" rel="stylesheet">
+    <link href="profile.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex flex-row">
+        <div id="navigation_bar" class="list-group wd-navbar ">
+            <div class="list-group-item wd-navbar-nu">N</div>
+            <a href="../" class="list-group-item list-group-item-action wd-navbar-item-active">
+                <i class="fa-solid fa-user fa-2x wd-navbar-icon-account"></i>
+                <div class="wd-navbar-text">Account</div>
+            </a>
+            <a href="../../dashboard/" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-gauge fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Dashboard</div>
+            </a>
+            <a href="../../courses/" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-book fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Courses</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-calendar fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Calendar</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-envelope fa-2x wd-navbar-icon"></i>
+                <div class="wd-notif-dot">10</div>
+                <div class="wd-navbar-text">Inbox</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-clock fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">History</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-brands fa-slideshare fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Studio</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-arrow-right-to-bracket fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Commons</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-question fa-2x wd-navbar-icon"></i>
+                <div class="wd-notif-dot">10</div>
+                <div class="wd-navbar-text">Help</div>
+            </a>
+            <div class="wd-navbar-item wd-navbar-take-height"></div>
+        </div>
+
+        <div class="flex-fill">
+            <h3 class="wd-top-profile">Aidan Ih's Profile</h3>
+            <div class="d-flex flex-row">
+                <ul class="list-group wd-profile-sidebar">
+                    <a href="#" class="list-group-item list-group-item">Notifications</a>
+                    <a href="profile/" class="list-group-item list-group-item selected">Profile</a>
+                    <a href="#" class="list-group-item list-group-item">Settings</a>
+                    <a href="#" class="list-group-item list-group-item">ePortfolios</a>
+                    <a href="#" class="list-group-item list-group-item">Shared Content</a>
+                    <a href="#" class="list-group-item list-group-item">The Hub</a>
+                    <a href="#" class="list-group-item list-group-item">Qwickly Course Tools</a>
+                    <a href="#" class="list-group-item list-group-item">Global Announcements</a>
+                </ul>
+
+
+                <div style="width: 300px">
+                    <i class="fa fa-user fa-5x wd-profile-image"></i>
+                    <H3 class="wd-margin-vertical">Aidan Ih</H3>
+
+                    <div class="form-group">
+                        <label for="name-input">Name:*</label>
+                        <input type="text" class="form-control" id="name-input">
+                        <label for="pronouns-input">Pronouns:</label>
+                        <select class="form-select" id="pronouns-input">
+                            <option selected>None</option>
+                            <option>He/Him</option>
+                            <option>She/Her</option>
+                            <option>They/Them</option>
+                        </select>
+                        <label for="title-input">Title</label>
+                        <input type="text" class="form-control" id="title-input">
+                    </div>
+
+                    <H4 class="wd-margin-vertical">Contact</H4>
+                    No registered services, you can add some on the <a class="wd-red-link" href="#">settings</a>
+                    page
+
+                    <h4 class="wd-margin-vertical">Biography</h4>
+                    <div class="form-group">
+                        <textarea type="textarea" class="form-control" rows="4"></textarea>
+                    </div>
+
+                    <h4 class="wd-margin-vertical">Biography</h4>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5 wd-center-text"><b>Title</b></div>
+                            <div class="col-2"></div>
+                            <div class="col-5 wd-center-text"><b>URL</b></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-5 wd-no-padding">
+                                <input type="text" value="YouTube" class="form-control">
+                            </div>
+                            <div class="col-2 wd-center-text wd-edit-icons-margin"><i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="col-4 wd-no-padding">
+                                <input type="text" value="youtube.com" class="form-control">
+                            </div>
+                            <div class="col-1 wd-center-text wd-edit-icons-margin wd-red">
+                                <i class="fa fa-x"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5 wd-no-padding">
+                                <a href="#" class="btn wd-link-button" role="button">Add another link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wd-bottom-line"></div>
+
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-3">
+                            <a href="index.html" class="btn wd-edit-button" role="button">Cancel</a>
+                        </div>
+                        <div class="col-5">
+                            <a href="index.html" class="btn wd-save-button" role="button">Save Profile</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div>
+                    <a href="index.html" class="btn wd-edit-button float-end" role="button"><i
+                            class="fa fa-pencil"></i>Cancel
+                        Editing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

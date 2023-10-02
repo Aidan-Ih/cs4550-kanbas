@@ -1,0 +1,66 @@
+.wd-dashboard-title {
+    color: gray;
+}
+
+.wd-dashboard {
+    max-width: 1220px;
+}
+
+.wd-dashboard-item {
+    width: 275px;
+    height: 275px;
+    margin: 15px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.wd-card-box-blue {
+    height: 140px;
+    background-color: lightblue;
+}
+
+.wd-card-title-blue{
+    a {
+        color: lightblue;
+    }
+}
+
+.wd-card-box-red {
+    height: 140px;
+    background-color: lightpink;
+}
+
+.wd-card-title-red{
+    a {
+        color: lightpink;
+    }
+}
+
+.wd-card-box-green {
+    height: 140px;
+    background-color: lightgreen;
+}
+
+.wd-card-title-green{
+    a {
+        color: lightgreen;
+    }
+}
+
+.wd-card-info-small{
+    color: darkslategray;
+    font-size: 14px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.wd-card-info-smaller {
+    color: darkslategray;
+    font-size: 12px;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.wd-card-logo {
+    margin-top: 20px;
+}

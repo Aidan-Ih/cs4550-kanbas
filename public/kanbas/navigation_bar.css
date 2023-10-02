@@ -1,0 +1,79 @@
+.wd-navbar {
+    width: 85px;
+    margin-right: 15px;
+}
+
+.wd-navbar-item {
+    padding: 5px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: black;
+
+    .wd-navbar-text {
+        color:white;
+        font-size: 14px;
+    }
+
+    .wd-navbar-icon {
+        color: red
+    }
+
+    .wd-navbar-icon-account {
+        color:lightgray;
+    }
+
+    .wd-notif-dot {
+        background-color: green;
+        border-radius: 40px;
+        height: 24px;
+        width: 30px;
+        text-align: center;
+        position: absolute;
+        left: 47px;
+        top: 0px;
+    }
+}
+
+.wd-navbar-item-active {
+    padding: 5px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: white;
+
+    .wd-navbar-text {
+        color:red;
+        font-size: 14px;
+    }
+
+    .wd-navbar-icon {
+        color: red
+    }
+
+    .wd-navbar-icon-account {
+        color:lightgray;
+    }
+
+    .wd-notif-dot {
+        background-color: green;
+        border-radius: 40px;
+        height: 24px;
+        width: 30px;
+        text-align: center;
+        position: absolute;
+        left: 47px;
+        top: 0px;
+    }
+}
+
+.wd-navbar-nu {
+    padding: 0;
+    color: red;
+    background-color: black;
+    font-size: 60px;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+.wd-navbar-take-height {
+    height: 800px;
+}

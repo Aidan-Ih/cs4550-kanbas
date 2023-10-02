@@ -1,0 +1,27 @@
+.wd-profile-sidebar {
+    width: 200px;
+
+    .list-group-item {
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+        color: red;
+        border-radius: 0px;
+    }
+
+    .list-group-item:hover {
+        background:white
+    }
+
+
+    .selected {
+        color: black;
+        border-left-width: 3px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+        border-color: black;
+    }
+}
+

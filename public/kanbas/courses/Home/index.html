@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aidan's Kanbas</title>
+    <link href="../../../vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="../../navigation_bar.css" rel="stylesheet">
+    <link href="../courses.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex flex-row">
+        <div id=" navigation_bar" class="list-group wd-navbar d-none d-md-block">
+            <div class="list-group-item wd-navbar-nu">N</div>
+            <a href="../../account/" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-user fa-2x wd-navbar-icon-account"></i>
+                <div class="wd-navbar-text">Account</div>
+            </a>
+            <a href="../../dashboard/" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-gauge fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Dashboard</div>
+            </a>
+            <a href="../../courses/" class="list-group-item list-group-item-action wd-navbar-item-active">
+                <i class="fa-solid fa-book fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Courses</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-calendar fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Calendar</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-envelope fa-2x wd-navbar-icon"></i>
+                <div class="wd-notif-dot">10</div>
+                <div class="wd-navbar-text">Inbox</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-regular fa-clock fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">History</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-brands fa-slideshare fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Studio</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-arrow-right-to-bracket fa-2x wd-navbar-icon"></i>
+                <div class="wd-navbar-text">Commons</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action wd-navbar-item">
+                <i class="fa-solid fa-question fa-2x wd-navbar-icon"></i>
+                <div class="wd-notif-dot">10</div>
+                <div class="wd-navbar-text">Help</div>
+            </a>
+            <div class="wd-navbar-item wd-navbar-take-height"></div>
+        </div>
+
+        <div class="w-100">
+            <div class="d-none d-md-block wd-home-top-bar">
+                <div class="d-flex">
+                    <div class="me-auto">
+                        <i class="fa-solid fa-bars fa-2x" style="margin-right: 10px;"></i>
+                        <nav style=" --bs-breadcrumb-divider: '>' ;" aria-label="breadcrumb">
+                            <ol class="breadcrumb m-1">
+                                <li class="breadcrumb-item"><a class="wd-red-link" href="#">CS4550.123456.789012</a></li>
+                                <li class="breadcrumb-item"><a class="wd-red-link" href="#">Home</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <button type="button" class="btn btn-secondary tr-button">Student View</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="d-block d-md-none top-bar-small">
+                <div style="position: fixed; top: 30px; left: 30px;">
+                    <a href="kanbas_navbar.html"><i class="fa-solid fa-bars fa-2x"></i></a>
+                </div>
+
+                <div style="position: fixed; top: 30px; right: 30px;">
+                    <a href="course_navbar.html">
+                        <i class="fa-solid fa-chevron-down 2x"></i>
+                    </a>
+                </div>
+
+                <div class="d-flex justify-content-center" style="padding-top: 20px">
+                    <div>
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" style="color: white">CS4550.123456.789012</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    Home
+                </div>
+            </div>
+
+            <div class="d-none d-md-block button-bar-margin">
+                <i>123456 - Fall 2023</i>
+                <span class="float-end">
+                    <button type="button" class="btn btn-secondary tr-button">Collapse All</button>
+                    <button type="button" class="btn btn-secondary tr-button">View Progress</button>
+                    <span class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Publish All
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        </div>
+                    </span>
+                    <button type="button" class="btn btn-danger tr-button">+ Module</button>
+                </span>
+            </div>
+
+
+            <div class="row">
+                <ul class="list-group wd-profile-sidebar col d-none d-md-block p-0" style="max-width: 200px;">
+                    <a class="list-group-item selected" href=".">Home</a>
+                    <a class="list-group-item" href="#">Modules</a>
+                    <a class="list-group-item" href="#">Piazza</a>
+                    <a class="list-group-item" href="#">Zoom Meetings</a>
+                    <a class="list-group-item" href="../Assignments/">Assignments</a>
+                    <a class="list-group-item" href="#">Quizzes</a>
+                    <a class="list-group-item" href="../Grades/">Grades</a>
+                    <a class="list-group-item" href="#">People</a>
+                    <a class="list-group-item" href="#">Panopto Video</a>
+                    <a class="list-group-item" href="#">Discussions</a>
+                    <a class="list-group-item" href="#">Announcements</a>
+                    <a class="list-group-item" href="#">Pages</a>
+                    <a class="list-group-item" href="#">Files</a>
+                    <a class="list-group-item" href="#">Rubrics</a>
+                    <a class="list-group-item" href="#">Outcomes</a>
+                    <a class="list-group-item" href="#">Collaborations</a>
+                    <a class="list-group-item" href="#">Syllabus</a>
+                    <a class="list-group-item" href="#">Settigs</a>
+                </ul>
+
+                <div class="col-xxl-8 col-xl-8 col-md-9">
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary module-group-title">
+                            Module 1
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-plus" aria-hidden="true"> </i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 1
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            <a class="wd-red-link" href="#">Lecture Notes</a>
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Slideshow
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            <a class="wd-red-link" href="#">Syllabus</a>
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 2
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Lecture Notes
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Slideshow
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            In Class Activity
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 3
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Lecture Notes
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Slideshow
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Homework
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <br> <br>
+
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary module-group-title">
+                            Module 2
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-plus" aria-hidden="true"> </i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 4
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            <a class="wd-red-link" href="#">Lecture Notes</a>
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Slideshow
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 5
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Lecture Notes
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            <a class="wd-red-link" href="#">Homework</a>
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            In Class Activity
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item">
+                            Lecture 6
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Lecture Notes
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Slideshow
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                        <li class="list-group-item module-group-item module-item-indent">
+                            Homework
+                            <div class="float-end">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: green;"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"> </i>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col d-none d-xl-block p-1">
+                    <h4>Course Status</h4>
+
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-secondary tr-button"> Unpublish</button>
+                        <button type="button" class="btn btn-secondary tr-button published-button"><i
+                                class="fa fa-check-circle" aria-hidden="true"></i>Published</button>
+                    </div><br>
+
+                    <div class="d-grid gap-1">
+                        <button class="btn btn-secondary" type="button">Export Existing Content</button>
+                        <button class="btn btn-secondary" type="button">Import From Commons</button>
+                        <button class="btn btn-secondary" type="button">Choose Home Page</button>
+                        <button class="btn btn-secondary" type="button">View Course Stream</button>
+                        <button class="btn btn-secondary" type="button">New Announcement</button>
+                        <button class="btn btn-secondary" type="button">New Analytics</button>
+                        <button class="btn btn-secondary" type="button">View Course Notifications</button>
+                    </div><br>
+
+                    <h4>To Do</h4>
+                    <hr>
+                    <div class="d-flex" style="padding-left: 30px;">
+                        <i class="fa fa-clock" style="position: relative; left: -20px"></i>
+                        <div class="d-flex flex-column">
+                            <b>Grade some stuff</b><br>
+                            Complete grading for x, y, and z
+                        </div>
+                    </div><br>
+
+                    <h4>Coming Up</h4>
+                    <div class="d-flex" style="padding-left: 30px;">
+                        <i class="fa fa-calendar" style="position: relative; left: -20px"></i>
+                        <div class="d-flex flex-column">
+                            <b>Lecture</b><br>
+                            This week's lecture
+                            <br>
+                            <b>Office Hours</b><br>
+                            My Office Hours
+                        </div>
+                    </div><br>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>

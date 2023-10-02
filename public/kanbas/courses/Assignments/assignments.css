@@ -1,0 +1,95 @@
+.module-group-item {
+    font-size: 18px;
+    color: black;
+    border-left-color: green;
+    border-left-width: 5px;
+    border-radius: 0px;
+    height: 100px;
+}
+
+.module-group-title {
+    font-size: 18px;
+    color: black;
+    border-radius: 0px;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+.module-item-indent {
+    padding-left: 50px;
+}
+
+.list-group-item-secondary {
+    height: 50px;
+    padding-top: 10px;
+}
+
+.button-bar-margin {
+    margin-bottom: 20px;
+}
+
+.tr-button {
+    margin-right: 10px;
+}
+
+.top-bar-small {
+    background-color: black;
+    height: 100px;
+    color: white;
+}
+
+.published-button {
+    color:white;
+    background-color: greenyellow;
+}
+
+.btn-secondary {
+    background-color: #e2e3e5;
+    color: black;
+}
+
+.wd-red-link {
+    text-decoration: none;
+    color: red;
+}
+
+.wd-assignment-grip {
+    padding-top: 26px;
+}
+
+.wd-assignment-check-pad{
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+.wd-assignment-title{
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.wd-assignment-desc {
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+.wd-total {
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.wd-title-link {
+    color: black;
+    text-decoration: none;
+}
+
+.wd-form-label-align {
+    text-align: right;
+}
+
+.wd-p-left {
+    padding-left: 15px;
+    margin-left: 0px;
+}
