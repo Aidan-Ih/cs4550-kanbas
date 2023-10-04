@@ -24,6 +24,7 @@
 
     .wd-notif-dot {
         background-color: green;
+        color: black;
         border-radius: 40px;
         height: 24px;
         width: 30px;
