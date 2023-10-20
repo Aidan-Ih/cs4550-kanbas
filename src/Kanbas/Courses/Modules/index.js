@@ -1,12 +1,11 @@
 import "./modules.css"
-import db from "../../Database"
+import modules from "../../Database/modules.json"
 import { useParams } from "react-router"
 import { FaGripVertical } from "react-icons/fa6"
 
 const Modules = () => {
 
     const { courseId } = useParams();
-    const modules = db.modules
     const course_modules = modules[courseId]
 
     return (

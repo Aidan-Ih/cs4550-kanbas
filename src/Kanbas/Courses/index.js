@@ -9,7 +9,6 @@ import AssignmentEditor from "./Assignments/AssignmentEditor"
 
 
 function Courses() {
-    const { courseId } = useParams();
     const location = useLocation();
     const pathname = location.pathname;
 
