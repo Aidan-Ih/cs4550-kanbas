@@ -1,0 +1,29 @@
+.modules {
+    flex-grow: 6
+}
+
+.side-buttons{
+    flex-grow: 1;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}
+
+.todo-title {
+    margin-left: 10px;
+}
+
+.clock {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.todo-item {
+    margin-left: 10px;
+}

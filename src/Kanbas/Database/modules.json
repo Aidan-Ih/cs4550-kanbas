@@ -1,0 +1,52 @@
+{
+    "Fall-23-1": [
+        {
+            "name": "Welcome to Web Dev!",
+            "desc": "Intro to the course"
+        },
+        {
+            "name": "Required Textbook",
+            "desc": "You much purchase this textbook"
+        },
+        {
+            "name": "Week 1",
+            "desc": "HTML and stuff"
+        },
+        {
+            "name": "Week 2",
+            "desc": "CSS and more stuff"
+        }
+    ],
+    "Fall-23-2": [
+        {
+            "name": "Theory of Computation!",
+            "desc": "Church, Turing, and friends"
+        },
+        {
+            "name": "DFAs",
+            "desc": "wheeeeeeeeee"
+        },
+        {
+            "name": "Turing Machines",
+            "desc": "brrrrrrrr"
+        }
+    ],
+    "Fall-23-3": [
+        {
+            "name": "Programming Languages",
+            "desc": "Like javascript"
+        },
+        {
+            "name": "Python",
+            "desc": "Fun times"
+        },
+        {
+            "name": "Racket",
+            "desc": "Lambda did WHAT?"
+        },
+        {
+            "name": "Java",
+            "desc": "Boring :rolling_eyes:"
+        }
+    ]
+}

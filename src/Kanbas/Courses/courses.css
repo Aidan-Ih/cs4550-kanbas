@@ -1,0 +1,80 @@
+.wd-profile-sidebar {
+    width: 150;
+    border-radius: 0px;
+
+    .list-group-item {
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+        color: red;
+        border-radius: 0px;
+    }
+
+    .list-group-item:hover {
+        background:white
+    }
+
+
+    .selected {
+        color: black;
+        border-left-width: 3px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+        border-color: black;
+    }
+}
+
+.list-group-item {
+    color: red;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.wd-bg-blue {
+    background-color: lightblue;
+}
+
+.wd-home-top-bar {
+    margin-top: 10px;
+}
+
+.wd-home-top-bar-small {
+    background-color: black;
+    height: 100px;
+}
+
+.wd-bars {
+    color: red;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.top-text-format {
+    color: red;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+    right: -10px;
+}
+
+.wd-breadcrumb {
+    --bs-breadcrumb-divider: '>' ;
+    margin-top: 15px;
+
+    .breadcrumb {
+        margin: 5px;
+        margin-right: 20px;
+
+        .breadcrumb-item{
+            color:red;
+        }
+        
+        .breadcrumb-final {
+            color: black;
+        }
+    }
+}
+

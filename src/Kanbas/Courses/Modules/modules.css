@@ -1,0 +1,42 @@
+.btn {
+    margin: 5px;
+}
+
+.last-button {
+    margin-right: 50px;
+}
+
+.module-box {
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 2px;
+    height: 75px;
+
+    .module-title {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 8px;
+        text-align: center;
+    }
+
+    .module-desc {
+        font-size: 14px;
+        text-align: center;
+        margin-left: 10px;
+        margin-top: 26px;
+    }
+
+    .grip {
+        height: 25px;
+        width: 25px;
+        margin-top: 23px;
+        margin-left: 5px;
+    }
+}
+
+.btn-secondary {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}

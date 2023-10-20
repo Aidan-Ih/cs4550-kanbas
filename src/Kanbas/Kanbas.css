@@ -1,0 +1,6 @@
+.wd-content {
+    position: relative;
+    right: -100px;
+    width: 95%;
+    overflow: hidden;
+}
