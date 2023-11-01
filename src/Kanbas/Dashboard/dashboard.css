@@ -68,3 +68,16 @@
 .wd-dashboard-input {
     height: 50px;
 }
+
+.wd-dashboard-edit {
+    width: 600px;
+}
+
+.wd-edit-text-spacing {
+    margin-top: 13px;
+}
+
+.edit-label-spacing {
+    margin-top: 13px;
+    padding-right: 25px;
+}

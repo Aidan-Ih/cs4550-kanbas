@@ -4,7 +4,7 @@ import { React } from "react";
 
 const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
     deleteCourse, updateCourse }
-  ) => {
+) => {
     return (
         <div>
             <h1 className="wd-dashboard-title">Dashboard</h1>
@@ -27,31 +27,42 @@ const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
                     }
 
                 </div>
-                <div>
+                <div className="list-group  ms-auto wd-dashboard-edit">
+                    <h3>Add New Course</h3>
+
                     <div className="d-flex flex-row">
-                        <input value={newCourse.name} className="wd-dashboard-input form-control"
-                            onChange={(e) => setNewCourse({ ...newCourse, name: e.target.value })} />
-                        <input value={newCourse.number} className="wd-dashboard-input form-control"
-                            onChange={(e) => setNewCourse({ ...newCourse, number: e.target.value })} />
-                        <input value={newCourse.startDate} className="wd-dashboard-input form-control" type="date"
-                            onChange={(e) => setNewCourse({ ...newCourse, startDate: e.target.value })} />
-                        <input value={newCourse.endDate} className="wd-dashboard-input form-control" type="date"
-                            onChange={(e) => setNewCourse({ ...newCourse, endDate: e.target.value })} />
-                        <button className="wd-dashboard-input" onClick={addNewCourse} >
+                        <form className="form-control">
+                            <input value={newCourse.name} className="wd-dashboard-input form-control"
+                                onChange={(e) => setNewCourse({ ...newCourse, name: e.target.value })} />
+
+                            <input value={newCourse.number} className="wd-dashboard-input form-control"
+                                onChange={(e) => setNewCourse({ ...newCourse, number: e.target.value })} />
+
+                            <input value={newCourse.startDate} className="wd-dashboard-input form-control" type="date"
+                                onChange={(e) => setNewCourse({ ...newCourse, startDate: e.target.value })} />
+
+                            <input value={newCourse.endDate} className="wd-dashboard-input form-control" type="date"
+                                onChange={(e) => setNewCourse({ ...newCourse, endDate: e.target.value })} />
+
+                        </form>
+
+                        <button className="btn btn-secondary wd-dashboard-input" onClick={addNewCourse} >
                             Add
                         </button>
-                        <button className="wd-dashboard-input" onClick={updateCourse}>
+                        <button className="btn btn-danger wd-dashboard-input" onClick={updateCourse}>
                             Update
                         </button>
                     </div>
-                    <div className="list-group">
+                    <div>
 
                         {coursesState.map((course) => (
                             <Link key={course._id}
                                 to={`/Kanbas/Courses/${course._id}`}
-                                className="list-group-item">
-                                {course.name}
-                                <button
+                                className="list-group-item d-flex flex-row">
+                                <div className="wd-edit-text-spacing">
+                                    {course.name}
+                                </div>
+                                <button className="btn btn-secondary ms-auto"
                                     onClick={(event) => {
                                         event.preventDefault();
                                         setNewCourse(course);
@@ -59,7 +70,7 @@ const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
                                     Edit
                                 </button>
 
-                                <button
+                                <button className="btn btn-danger"
                                     onClick={(event) => {
                                         event.preventDefault();
                                         deleteCourse(course._id);
