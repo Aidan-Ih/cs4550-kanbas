@@ -2,7 +2,6 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import { FaBars } from "react-icons/fa6";
 import "./courses.css"
-import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor"
