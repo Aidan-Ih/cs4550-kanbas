@@ -1,7 +1,6 @@
 import "./modules.css"
 import { useParams } from "react-router"
 import { FaGripVertical } from "react-icons/fa6"
-import ModuleList from "./ModuleList"
 import { useSelector } from "react-redux";
 
 const Modules = ({ showEdit }) => {

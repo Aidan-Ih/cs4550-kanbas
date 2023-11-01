@@ -1,6 +1,6 @@
 import "./dashboard.css"
 import { Link } from "react-router-dom"
-import { React, useState } from "react";
+import { React } from "react";
 
 const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
     deleteCourse, updateCourse }

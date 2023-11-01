@@ -11,7 +11,6 @@ const AssignmentEditor = () => {
     const { courseId } = useParams();
     const { assignmentId } = useParams();
 
-    const assignments = useSelector((state) => state.assignmentReducer.assignments)
 
     var this_assignment = useSelector((state) => state.assignmentReducer.assignment)
 

@@ -1,6 +1,6 @@
 import "./assignments.css"
 import { useParams } from "react-router"
-import { FaGripVertical, FaCheck } from "react-icons/fa6"
+import { FaGripVertical } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux";
 import { setAssignment, deleteAssignment } from "./assignmentReducer";
