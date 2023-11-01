@@ -8,7 +8,6 @@ const Assignments = () => {
 
     const { courseId } = useParams();
     const course_assignments = assignments[courseId];
-    console.log(course_assignments)
 
     return (
         <div>

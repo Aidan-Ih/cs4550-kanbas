@@ -6,11 +6,15 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor"
+import { useParams } from "react-router-dom";
+import ModulesWithList from "./Modules/ModulesWithList";
 
 
-function Courses() {
+function Courses( {courses}) {
     const location = useLocation();
     const pathname = location.pathname;
+    const {courseId} = useParams();
+    const course = courses.find((course) => course._id === courseId)
 
     const arr = pathname.split("/")
     // get rid of first 3 items, leave only the items to put into the breadcrumb
@@ -48,8 +52,8 @@ function Courses() {
                 >
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<Home />} />
-                        <Route path="Modules" element={<Modules />} />
+                        <Route path="Home" element={<Home course={course}/>} />
+                        <Route path="Modules" element={<ModulesWithList />} />
                         <Route path="Assignments" element={<Assignments />} />
                         <Route
                             path="Assignments/:assignmentId"

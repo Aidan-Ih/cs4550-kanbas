@@ -2,7 +2,9 @@ import Modules from "../Modules";
 import "./home.css"
 import { FaClock } from "react-icons/fa6";
 
-const Home = (course_id) => {
+const Home = () => {
+
+
     return (
         <div className="d-flex flex-row">
             <div className="modules">

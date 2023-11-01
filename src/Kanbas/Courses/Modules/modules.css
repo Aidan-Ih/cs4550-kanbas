@@ -40,3 +40,13 @@
     background-color: #f0f0f0 !important;
     color: black !important;
 }
+
+.btn-red {
+    color:black !important;
+    background-color: red !important;
+}
+
+.btn-height {
+    height: 40px;
+    text-align: center;
+}
