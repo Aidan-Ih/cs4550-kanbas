@@ -1,13 +1,26 @@
 import "./assignments.css"
-import assignments from "../../Database/assignments.json"
 import { useParams } from "react-router"
 import { FaGripVertical, FaCheck } from "react-icons/fa6"
 import { Link } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux";
+import { setAssignment, deleteAssignment } from "./assignmentReducer";
 
 const Assignments = () => {
 
     const { courseId } = useParams();
-    const course_assignments = assignments[courseId];
+    var assignments = useSelector((state) => state.assignmentReducer.assignments)
+    const dispatch = useDispatch()
+
+    const clickNewAssignment = () => {
+        dispatch(setAssignment({
+            title: "New Assignment",
+            desc: "New Description",
+            due: "2023-09-01",
+            from: "2023-09-01",
+            to: "2023-09-01",
+            course: courseId,
+        }))
+    }
 
     return (
         <div>
@@ -23,7 +36,10 @@ const Assignments = () => {
                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         </div>
                     </span>
-                    <button type="button" className="btn btn-danger tr-button last-button">+ Module</button>
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/new-assignment`}
+                        type="button"
+                        className="btn btn-danger tr-button last-button"
+                        onClick={clickNewAssignment}>+ Assignment</Link>
                 </span >
             </div>
             <hr />
@@ -38,32 +54,34 @@ const Assignments = () => {
                         <i className="fa fa-ellipsis-v" aria-hidden="true"> </i>
                     </div>
                 </li>
-                {course_assignments.map((a) => {
-                    return (
-                        <li key={a.id} className="list-group-item list-group-item module-group-item">
-                            <div className="d-flex">
-                                <FaGripVertical className="wd-grip-sizing" />
-                                <div>
-                                    <div className="wd-assignment-title">
-                                        <Link to={`/Kanbas/Courses/${courseId}/Assignments/${a.title}`}>{a.title}</Link>
+                {assignments
+                    .filter((a) => a.course === courseId)
+                    .map((a) => {
+                        return (
+                            <li key={a.id} className="list-group-item list-group-item module-group-item">
+                                <div className="d-flex">
+                                    <FaGripVertical className="wd-grip-sizing" />
+                                    <div>
+                                        <div className="wd-assignment-title">
+                                            <Link onClick={() => dispatch(setAssignment(a))} to={`/Kanbas/Courses/${courseId}/Assignments/${a.title}`}>{a.title}</Link>
+                                        </div>
+                                        <div className="wd-assignment-desc">
+                                            {a.desc}
+                                        </div>
+                                        <div className="wd-assignment-desc">
+                                            <b>Due:</b> {a.due} <b>Available From:</b> {a.from} <b>Until: </b> {a.until} | 100pts
+                                        </div>
                                     </div>
-                                    <div className="wd-assignment-desc">
-                                        {a.desc}
-                                    </div>
-                                    <div className="wd-assignment-desc">
-                                        <b>Due:</b> {a.due} | 100pts
-                                    </div>
+                                    <button type="button"
+                                        className="btn btn-danger ms-auto delete-button-sizing"
+                                        onClick={() => dispatch(deleteAssignment(a.id))}>Delete</button>
                                 </div>
-                                <div className="ms-auto wd-assignment-check-pad">
-                                    <FaCheck/>
-                                </div>
-                            </div>
-                        </li>
-                    )
-                })}
+                            </li>
+                        )
+                    })}
 
             </ul>
-        </div>
+        </div >
     )
 }
 
