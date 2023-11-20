@@ -7,23 +7,38 @@ import "./Kanbas.css"
 import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
-
-import courses from "./Database/courses.json"
+import axios from "axios";
+import { useEffect } from "react";
 
 function Kanbas() {
+   const URL = "https://kanbas-node-server-app-oehk.onrender.com/api/courses"
 
-   const [coursesState, setCourses] = useState(courses);
+   const [courses, setCourses] = useState([]);
    const [newCourse, setCourse] = useState({
       name: "New Course", number: "New Number",
       startDate: "2023-09-10", endDate: "2023-12-15",
    });
-   const addNewCourse = () => {
-      setCourses([...coursesState, { ...newCourse, _id: new Date().getTime().toString() }]);
+   const addNewCourse = async () => {
+      const response = await axios.post(URL, newCourse);
+      setCourses([
+         response.data,
+         ...courses,
+      ]);
+      setCourse({ name: "" });
    };
-   const deleteCourse = (courseId) => {
-      setCourses(coursesState.filter((course) => course._id !== courseId));
+   const deleteCourse = async (courseId) => {
+      const response = await axios.delete(
+         `${URL}/${courseId}`
+      );
+
+      setCourses(courses.filter((course) => course._id !== courseId));
    };
-   const updateCourse = () => {
+   const updateCourse = async () => {
+      const response = await axios.put(
+         `${URL}/${newCourse._id}`,
+         newCourse
+      );
+
       setCourses(
          courses.map((c) => {
             if (c._id === newCourse._id) {
@@ -33,8 +48,14 @@ function Kanbas() {
             }
          })
       );
+   };;
+   const findAllCourses = async () => {
+      const response = await axios.get(URL);
+      setCourses(response.data);
    };
-
+   useEffect(() => {
+      findAllCourses();
+   }, []);
 
    return (
       <Provider store={store}>
@@ -45,14 +66,14 @@ function Kanbas() {
                   <Route path="/" element={<Navigate to="Dashboard" />} />
                   <Route path="Account" element={<h1>Account</h1>} />
                   <Route path="Dashboard" element={<Dashboard
-                     coursesState={coursesState}
+                     courses={courses}
                      newCourse={newCourse}
                      setNewCourse={setCourse}
                      addNewCourse={addNewCourse}
                      deleteCourse={deleteCourse}
                      updateCourse={updateCourse} />
                   } />
-                  <Route path="Courses/:courseId/*" element={<Courses courses={coursesState} />} />
+                  <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
                </Routes>
             </div>
          </div>

@@ -2,7 +2,7 @@ import "./dashboard.css"
 import { Link } from "react-router-dom"
 import { React } from "react";
 
-const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
+const Dashboard = ({ courses, newCourse, setNewCourse, addNewCourse,
     deleteCourse, updateCourse }
 ) => {
     return (
@@ -13,7 +13,7 @@ const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
 
                 <div className="d-flex flex-row flex-wrap wd-dashboard">
                     {
-                        coursesState.map((course) => (
+                        courses.map((course) => (
                             <div key={course._id} className="card wd-dashboard-item">
                                 <div className="wd-card-box-blue"></div>
                                 <div className="card-body">
@@ -55,7 +55,7 @@ const Dashboard = ({ coursesState, newCourse, setNewCourse, addNewCourse,
                     </div>
                     <div>
 
-                        {coursesState.map((course) => (
+                        {courses.map((course) => (
                             <Link key={course._id}
                                 to={`/Kanbas/Courses/${course._id}`}
                                 className="list-group-item d-flex flex-row">

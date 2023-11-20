@@ -7,13 +7,28 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor"
 import { useParams } from "react-router-dom";
 import ModulesWithList from "./Modules/ModulesWithList";
+import { useState, useEffect } from "react"
+import axios from "axios"
 
 
-function Courses( {courses}) {
+
+function Courses() {
     const location = useLocation();
     const pathname = location.pathname;
-    const {courseId} = useParams();
-    const course = courses.find((course) => course._id === courseId)
+    const { courseId } = useParams();
+    const [course, setCourse] = useState({});
+    const URL = "https://kanbas-node-server-app-oehk.onrender.com/api/courses";
+
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
 
     const arr = pathname.split("/")
     // get rid of first 3 items, leave only the items to put into the breadcrumb
@@ -51,7 +66,7 @@ function Courses( {courses}) {
                 >
                     <Routes>
                         <Route path="/" element={<Navigate to="Home" />} />
-                        <Route path="Home" element={<Home course={course}/>} />
+                        <Route path="Home" element={<Home course={course} />} />
                         <Route path="Modules" element={<ModulesWithList />} />
                         <Route path="Assignments" element={<Assignments />} />
                         <Route
