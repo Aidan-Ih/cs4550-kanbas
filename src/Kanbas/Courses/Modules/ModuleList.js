@@ -31,7 +31,7 @@ function ModuleList() {
         });
     };
     const handleUpdateModule = async () => {
-        const status = await updateModuleReq(module);
+        await updateModuleReq(module);
         dispatch(updateModule(module));
     };
 
