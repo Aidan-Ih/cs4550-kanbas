@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
     addModule,
     deleteModule,
@@ -13,14 +13,12 @@ import { findModulesForCourse, createModule, deleteModuleReq, updateModuleReq } 
 
 function ModuleList() {
     const { courseId } = useParams();
-    const {hacky, setHacky} = useState(0);
-    setHacky(1)
     useEffect(() => {
         findModulesForCourse(courseId)
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId]);
+    }, [courseId, dispatch]);
 
     const handleAddModule = () => {
         createModule(courseId, module).then((module) => {
