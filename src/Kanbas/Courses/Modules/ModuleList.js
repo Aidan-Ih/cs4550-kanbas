@@ -19,7 +19,7 @@ function ModuleList() {
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId]);
+    }, [courseId, dispatch]);
 
     const handleAddModule = () => {
         createModule(courseId, module).then((module) => {
