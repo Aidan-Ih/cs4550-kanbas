@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import {
     addModule,
     deleteModule,
@@ -8,7 +9,6 @@ import {
     setModules
 } from "./ModuleReducer";
 import { findModulesForCourse, createModule, deleteModuleReq, updateModuleReq } from "./client";
-import { useEffect } from "react";
 
 
 function ModuleList() {
