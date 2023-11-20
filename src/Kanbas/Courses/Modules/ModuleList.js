@@ -32,7 +32,6 @@ function ModuleList() {
     };
     const handleUpdateModule = async () => {
         await updateModuleReq(module);
-        console.log(hacky)
         dispatch(updateModule(module));
     };
 
