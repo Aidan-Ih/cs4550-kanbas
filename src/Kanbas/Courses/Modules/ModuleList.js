@@ -12,13 +12,14 @@ import { findModulesForCourse, createModule, deleteModuleReq, updateModuleReq } 
 
 
 function ModuleList() {
+    const dispatch = useDispatch();
     const { courseId } = useParams();
     useEffect(() => {
         findModulesForCourse(courseId)
             .then((modules) =>
                 dispatch(setModules(modules))
             );
-    }, [courseId, dispatch]);
+    }, [courseId]);
 
     const handleAddModule = () => {
         createModule(courseId, module).then((module) => {
@@ -37,7 +38,7 @@ function ModuleList() {
 
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
-    const dispatch = useDispatch();
+    
     return (
         <ul className="list-group">
             <li className="list-group-item">
