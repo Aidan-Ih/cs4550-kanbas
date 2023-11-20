@@ -13,6 +13,8 @@ import { findModulesForCourse, createModule, deleteModuleReq, updateModuleReq } 
 
 function ModuleList() {
     const { courseId } = useParams();
+    const {hacky, setHacky} = useState(0);
+    setHacky(1)
     useEffect(() => {
         findModulesForCourse(courseId)
             .then((modules) =>
@@ -32,6 +34,7 @@ function ModuleList() {
     };
     const handleUpdateModule = async () => {
         await updateModuleReq(module);
+        console.log(hacky)
         dispatch(updateModule(module));
     };
 
