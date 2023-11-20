@@ -4,11 +4,10 @@ import { Routes, Route, Navigate } from "react-router";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import "./Kanbas.css"
-import { useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Kanbas() {
    const URL = "https://kanbas-node-server-app-oehk.onrender.com/api/courses"
