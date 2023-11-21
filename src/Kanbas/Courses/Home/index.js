@@ -4,7 +4,6 @@ import { FaClock } from "react-icons/fa6";
 
 const Home = () => {
 
-
     return (
         <div className="d-flex flex-row">
             <div className="modules">
@@ -43,7 +42,6 @@ const Home = () => {
                         <div>3:00 PM</div>
                     </div>
                 </div>
-
             </div>
         </div>
     )
