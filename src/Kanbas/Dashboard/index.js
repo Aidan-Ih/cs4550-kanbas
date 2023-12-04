@@ -23,7 +23,7 @@ const Dashboard = ({ courses, newCourse, setNewCourse, addNewCourse,
                                     <i className="fa-regular fa-pen-to-square wd-card-logo"></i>
                                 </div>
                             </div>
-                        ))
+                        )) 
                     }
 
                 </div>
