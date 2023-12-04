@@ -4,7 +4,8 @@ import * as client from "./client";
 function Signup() {
   const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
-    username: "", password: "" });
+    username: "", password: ""
+  });
   const navigate = useNavigate();
   const signup = async () => {
     try {
@@ -18,17 +19,27 @@ function Signup() {
     <div>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <input
-        value={credentials.username}
-        onChange={(e) => setCredentials({
-          ...credentials,
-          username: e.target.value })} />
-      <input
-        value={credentials.password}
-        onChange={(e) => setCredentials({
-          ...credentials,
-          password: e.target.value })} />
-      <button onClick={signup}>
+      <div className="form-group">
+        <div className="d-flex flex-row">
+          <laber for="username">Username: </laber>
+          <input id="username" className="form-control"
+            value={credentials.username}
+            onChange={(e) => setCredentials({
+              ...credentials,
+              username: e.target.value
+            })} />
+        </div>
+        <div className="d-flex flex-row ">
+          <label for="password">Password:</label>
+          <input id="password" className="form-control"
+            value={credentials.password}
+            onChange={(e) => setCredentials({
+              ...credentials,
+              password: e.target.value
+            })} />
+        </div>
+      </div>
+      <button className="btn btn-secondary" onClick={signup}>
         Signup
       </button>
     </div>
