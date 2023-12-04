@@ -80,4 +80,4 @@ function Kanbas() {
 
    );
 }
-export default Kanbas
+export default Kanbas;

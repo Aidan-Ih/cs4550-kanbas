@@ -3,6 +3,7 @@ import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
 import { HashRouter } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router";
+import Assignment6 from "./a6";
 
 function App() {
    return (
@@ -13,6 +14,7 @@ function App() {
                <Route path="/hello" element={<HelloWorld />} />
                <Route path="/Labs/*" element={<Labs />} />
                <Route path="/Kanbas/*" element={<Kanbas />} />
+               <Route path="/a6/*" element={<Assignment6/>} />
             </Routes>
          </div>
       </HashRouter>
