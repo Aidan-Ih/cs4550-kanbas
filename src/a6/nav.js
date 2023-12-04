@@ -3,7 +3,7 @@ import "./index.css"
 function Nav() {
   const { pathname } = useLocation();
   return (
-    <div className="list-group navbar">
+    <div className="list-group">
       <Link to="/a6/signin" className={`list-group-item w-100 navbar-item ${pathname.includes("signin") ? "active" : ""}`}>
         Signin
       </Link>
